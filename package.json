@@ -1,0 +1,36 @@
+{
+  "name": "mobile-test-framework",
+  "version": "1.0.0",
+  "description": "Android mobile test automation framework: TypeScript, Appium, WebdriverIO, Mocha, Page Object Model. Runs on a local Android emulator and on Perfecto cloud devices.",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "appium:driver": "appium driver install uiautomator2@4.0.0",
+    "upload": "tsx scripts/uploadApp.ts",
+    "test:local": "wdio run config/wdio.android.local.conf.ts",
+    "test:perfecto": "wdio run config/wdio.android.perfecto.conf.ts",
+    "test:ios": "wdio run config/wdio.ios.conf.ts"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.0",
+    "@types/node": "^22.0.0",
+    "@wdio/appium-service": "^9.0.0",
+    "@wdio/cli": "^9.0.0",
+    "@wdio/globals": "^9.0.0",
+    "@wdio/local-runner": "^9.0.0",
+    "@wdio/mocha-framework": "^9.0.0",
+    "@wdio/spec-reporter": "^9.0.0",
+    "@wdio/types": "^9.0.0",
+    "appium": "^2.0.0",
+    "appium-uiautomator2-driver": "^4.0.0",
+    "dotenv": "^16.4.5",
+    "expect-webdriverio": "^6.0.9",
+    "tsx": "^4.0.0",
+    "typescript": "^5.4.0",
+    "webdriverio": "^9.0.0"
+  }
+}
